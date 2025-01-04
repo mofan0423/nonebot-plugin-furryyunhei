@@ -1,28 +1,28 @@
 [project]
 name = "nonebot-plugin-furryyunhei"
 version = "1.0.0"
-description = "nonebot插件 furry云黑查询插件"
+description = "NoneBot 插件用于查询 furry 云黑名单"
 readme = "README.md"
 requires-python = ">=3.10"
-license = {file = "LICENSE"}
-keywords = [""]
+license = { file = "LICENSE" }
+keywords = ["nonebot", "furry", "cloud-blacklist"]
 authors = [
-  {email = "admin@zhuiyenet.com"},
-  {name = "mofan"}
+  { email = "admin@zhuiyenet.com" },
+  { name = "mofan" }
 ]
 classifiers = [
   "Development Status :: 4 - Beta",
-  "Programming Language :: Python"
+  "Programming Language :: Python :: 3.10",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
 ]
 
 dependencies = [
   "nonebot-adapter-onebot",
   "nonebot2",
-  "json",
   "python-dotenv",
-  "requests",
-  "os'
+  "requests"
 ]
 
 [project.urls]
-repository = "https://github.com/cubstaryow/nonebot-plugin-furryyunhei"
+repository = "https://github.com/mofan0423/nonebot-plugin-furryyunhei"
