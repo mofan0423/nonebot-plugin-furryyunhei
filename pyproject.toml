@@ -1,0 +1,28 @@
+[project]
+name = "nonebot-plugin-furryyunhei"
+version = "1.0.0"
+description = "nonebot插件 furry云黑查询插件"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+keywords = [""]
+authors = [
+  {email = "admin@zhuiyenet.com"},
+  {name = "mofan"}
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
+
+dependencies = [
+  "nonebot-adapter-onebot",
+  "nonebot2",
+  "json",
+  "python-dotenv",
+  "requests",
+  "os'
+]
+
+[project.urls]
+repository = "https://github.com/cubstaryow/nonebot-plugin-furryyunhei"
