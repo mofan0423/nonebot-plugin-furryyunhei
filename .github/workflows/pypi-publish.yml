@@ -1,4 +1,4 @@
-name: Publish
+name: PYPI_API_TOKEN
 
 on:
   push:
