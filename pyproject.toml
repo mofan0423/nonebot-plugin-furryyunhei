@@ -20,7 +20,7 @@ dependencies = [
   "nonebot-adapter-onebot",
   "nonebot2",
   "python-dotenv",
-  "requests"
+  "httpx"
 ]
 [project.urls]
 repository = "https://github.com/mofan0423/nonebot-plugin-furryyunhei"
