@@ -1,6 +1,6 @@
 [project]
 name = "nonebot-plugin-furryyunhei"
-version = "1.0.0"
+version = "1.0.1"
 description = "NoneBot 插件用于查询 furry 云黑名单"
 readme = "README.md"
 requires-python = ">=3.10"
