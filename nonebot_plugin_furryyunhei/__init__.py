@@ -1,11 +1,13 @@
+import json
+
 from nonebot import on_command
 from nonebot.adapters import Message
 from nonebot.params import CommandArg
 import httpx
-import json
-import os
 from nonebot.plugin import PluginMetadata
-from dotenv import load_dotenv
+from nonebot import get_plugin_config
+
+from .config import Config
 
 __plugin_meta__ = PluginMetadata(
     name="nonebot-plugin-furryyunhei",
@@ -15,8 +17,10 @@ __plugin_meta__ = PluginMetadata(
     homepage="https://github.com/mofan0423/nonebot-plugin-furryyunhei",
     supported_adapters={"~onebot.v11"},
 )
+
 furryyunhei = on_command("查云黑", aliases={"yunhei"}, priority=10, block=True)
-load_dotenv(verbose=True)
+
+api_key = get_plugin_config(Config)
 
 @furryyunhei.handle()
 async def handle_function(args: Message = CommandArg()):
@@ -26,12 +30,12 @@ async def handle_function(args: Message = CommandArg()):
         return
 
     url = 'http://yunhei.qimeng.fun:12301/OpenAPI.php'
-    KEY = os.getenv("YUNHEIAPIKEY")
-    parms = {'id': location, 'key': KEY}
+    key = api_key.yunhei_api_key  # 使用从配置中读取的API密钥
+    params = {'id': location, 'key': key}
 
     async with httpx.AsyncClient() as client:
         try:
-            response = await client.get(url, params=parms)
+            response = await client.get(url, params=params)
             response.raise_for_status()
             data2 = response.json()
 
@@ -58,7 +62,7 @@ async def handle_function(args: Message = CommandArg()):
                 await furryyunhei.finish(return_)
             else:
                 await furryyunhei.finish("未找到有效的信息条目，请检查数据源。")
-        
+
         except httpx.RequestError as e:
             await furryyunhei.finish(f"请求失败: {e}")
         except json.JSONDecodeError as e:

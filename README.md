@@ -12,10 +12,10 @@ _✨ NoneBot 插件 furry云黑查询插件 ✨_
 
 
 <a href="./LICENSE">
-    <img src="https://img.shields.io/github/license/owner/nonebot-plugin-template.svg" alt="license">
+    <img src="https://img.shields.io/github/license/mofan0423/nonebot-plugin-furryyunhei.svg" alt="license">
 </a>
-<a href="https://pypi.python.org/pypi/nonebot-plugin-template">
-    <img src="https://img.shields.io/pypi/v/nonebot-plugin-template.svg" alt="pypi">
+<a href="https://pypi.python.org/pypi/nonebot-plugin-furryyunhei">
+    <img src="https://img.shields.io/pypi/v/nonebot-plugin-furryyunhei.svg" alt="pypi">
 </a>
 <img src="https://img.shields.io/badge/python-3.9+-blue.svg" alt="python">
 
@@ -74,7 +74,7 @@ _✨ NoneBot 插件 furry云黑查询插件 ✨_
 
 | 配置项 | 必填 | 默认值 | 说明 |
 |:-----:|:----:|:----:|:----:|
-| YUNHEIAPIKEY | 是 | 无 | APIKEY,必填 |
+| yunhei_api_key | 是 | 无 | APIKEY,必填 |
 
 ## 🎉 使用
 ### 指令表
