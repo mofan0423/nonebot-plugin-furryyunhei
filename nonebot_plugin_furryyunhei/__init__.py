@@ -15,6 +15,7 @@ __plugin_meta__ = PluginMetadata(
     usage="/查云黑 [QQ号]或/yunhei [QQ号]",
     type="application",
     homepage="https://github.com/mofan0423/nonebot-plugin-furryyunhei",
+    config=Config,
     supported_adapters={"~onebot.v11"},
 )
 
